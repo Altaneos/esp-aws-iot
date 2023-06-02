@@ -21,7 +21,7 @@ TlsTransportStatus_t xTlsConnect( NetworkContext_t* pxNetworkContext )
         .ds_data = pxNetworkContext->ds_data,
         .clientkey_buf = ( const unsigned char* )( pxNetworkContext->pcClientKey ),
         .clientkey_bytes = pxNetworkContext->pcClientKeySize,
-        .timeout_ms = 1000,
+        .timeout_ms = 5000,
     };
 
     esp_tls_t* pxTls = esp_tls_init();
